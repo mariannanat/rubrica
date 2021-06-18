@@ -24,7 +24,7 @@ function get_table_body($items)
                 if (isset($_GET['id'])) {
                     $html .= "<td>$value</td>";
                 } else {
-                    $html .= "<td><a href='/rubrica/dettaglio-contatto.php?id={$row['ID']}'>$value</a></td>";
+                    $html .= "<td><a href='../rubrica/dettaglio-contatto.php?id={$row['ID']}'>$value</a></td>";
                 }
             } else if ($key === "Telefono") {
                 $html .= "<td><a href='tel:$value'>$value</a></td>";
@@ -33,8 +33,8 @@ function get_table_body($items)
             }
         }
         if (!isset($_GET['id'])) {
-            $html .= '<td><a href="/rubrica/includes/cancella-contatto.php?id=' . $row['ID'] . '">❌</a></td>';
-            $html .= '<td><a href="/rubrica/modifica-contatto.php?id=' . $row['ID'] . '">✏</a></td>';
+            $html .= '<td><a href="../rubrica/includes/cancella-contatto.php?id=' . $row['ID'] . '">❌</a></td>';
+            $html .= '<td><a href="../rubrica/modifica-contatto.php?id=' . $row['ID'] . '">✏</a></td>';
         }
         $html .= '</tr>';
     }
